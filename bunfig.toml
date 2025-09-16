@@ -1,0 +1,14 @@
+# Bun configuration to prevent timeouts
+[install]
+# Increase timeout to handle large dependency trees
+timeout = "300000"  # 5 minutes
+# Use faster registry
+registry = "https://registry.npmjs.org"
+# Enable retries
+retry = 3
+# Cache directory
+cache = true
+# Faster resolution
+concurrency = 10
+# Connection timeout
+network-timeout = "30000"

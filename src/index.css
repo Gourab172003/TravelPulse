@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Space Cadet Dark Theme - Day Mode */
+    --background: 229 24% 20%; /* Space Cadet #2B2D42 */
+    --foreground: 0 0% 95%; /* High contrast white */
+
+    --card: 195 15% 22%; /* Gunmetal Teal #253036 */
+    --card-foreground: 0 0% 95%;
+
+    --popover: 195 15% 22%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 174 100% 37%; /* Teal #00BFA6 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 28% 22%; /* Onyx #343A40 */
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 195 16% 25%; /* Deep Ocean Blue #1C2833 */
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 188 100% 42%; /* Electric Cyan #00BCD4 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 195 15% 30%;
+    --input: 195 15% 25%;
+    --ring: 174 100% 37%;
+
+    --emergency: 15 90% 55%;
+    --emergency-foreground: 0 0% 100%;
+    
+    --safety: 84 100% 58%; /* Lime #A3FF12 */
+    --safety-foreground: 229 24% 20%;
+
+    /* Dynamic Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(229 24% 20%), hsl(195 15% 22%), hsl(260 21% 23%));
+    --gradient-emergency: linear-gradient(135deg, hsl(15 90% 55%), hsl(25 85% 60%));
+    --gradient-safety: linear-gradient(135deg, hsl(84 100% 58%), hsl(94 85% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(229 24% 20%), hsl(195 15% 22%));
+    --gradient-section: linear-gradient(135deg, hsl(195 15% 22%), hsl(215 28% 22%), hsl(195 16% 25%));
+    --gradient-navigation: linear-gradient(90deg, hsl(174 100% 37%), hsl(188 100% 42%));
+
+    /* Modern Shadows */
+    --shadow-elegant: 0 20px 40px -10px hsl(229 24% 10% / 0.6);
+    --shadow-primary: 0 10px 30px -10px hsl(174 100% 37% / 0.4);
+    --shadow-accent: 0 10px 30px -10px hsl(188 100% 42% / 0.4);
+    --shadow-glow: 0 0 60px hsl(84 100% 58% / 0.3);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Space Cadet Dark Theme - Night Mode (slightly darker) */
+    --background: 229 24% 18%; /* Darker Space Cadet */
+    --foreground: 0 0% 98%;
+
+    --card: 195 15% 20%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 195 15% 20%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 174 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 28% 20%;
+    --secondary-foreground: 0 0% 92%;
+
+    --muted: 195 16% 23%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 188 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 195 15% 28%;
+    --input: 195 15% 23%;
+    --ring: 174 100% 40%;
+
+    /* Enhanced gradients for night mode */
+    --gradient-hero: linear-gradient(135deg, hsl(229 24% 18%), hsl(195 15% 20%), hsl(260 21% 21%));
+    --gradient-section: linear-gradient(135deg, hsl(195 15% 20%), hsl(215 28% 20%), hsl(195 16% 23%));
+    --gradient-navigation: linear-gradient(90deg, hsl(174 100% 40%), hsl(188 100% 45%));
+
+    --shadow-elegant: 0 25px 50px -15px hsl(229 24% 8% / 0.8);
+    --shadow-primary: 0 15px 35px -10px hsl(174 100% 40% / 0.5);
+    --shadow-glow: 0 0 80px hsl(84 100% 58% / 0.4);
+
+    --sidebar-background: 229 24% 16%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 174 100% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 195 15% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 195 15% 25%;
+    --sidebar-ring: 174 100% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
